@@ -1393,6 +1393,7 @@ static u64 ___bpf_prog_run(u64 *regs, const struct bpf_insn *insn)
 	u32 tail_call_cnt = 0;
 	void *ptr;
 	int off;
+	u32 tmp;
 
 #define CONT	 ({ insn++; goto select_insn; })
 #define CONT_JMP ({ insn++; goto select_insn; })
